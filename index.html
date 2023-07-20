@@ -37,24 +37,109 @@
         </div>
     </header>
     <main class="main">
-        <div class="container">
-            <div class="left column">
-                <div class="main-image">
-                    <img src="/assets/images/main-image.png" alt="main-image">
-                    <button class="main-image__play-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                            <path d="M9.20469 26.0563C8.55885 26.4761 7.90463 26.5 7.242 26.128C6.58067 25.7572 6.25 25.1844 6.25 24.4094V4.35627C6.25 3.58127 6.58067 3.00777 7.242 2.63577C7.90463 2.26506 8.55885 2.2896 9.20469 2.70939L24.9953 12.736C25.5766 13.1235 25.8672 13.6724 25.8672 14.3828C25.8672 15.0932 25.5766 15.6422 24.9953 16.0297L9.20469 26.0563Z" fill="white"/>
-                        </svg>
+        <section class="current-film">
+            <div class="container">
+                <div class="left-column">
+                    <div class="current-film-image">
+                        <img src="/assets/images/main-image.png" alt="main-image">
+                        <button class="current-film-image__play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <path d="M9.20469 26.0563C8.55885 26.4761 7.90463 26.5 7.242 26.128C6.58067 25.7572 6.25 25.1844 6.25 24.4094V4.35627C6.25 3.58127 6.58067 3.00777 7.242 2.63577C7.90463 2.26506 8.55885 2.2896 9.20469 2.70939L24.9953 12.736C25.5766 13.1235 25.8672 13.6724 25.8672 14.3828C25.8672 15.0932 25.5766 15.6422 24.9953 16.0297L9.20469 26.0563Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="buy-button">
+                        Купить билет (от 6 руб.)
                     </button>
                 </div>
-                <button class="main-button">
-                    Купить билет (от 6 руб.)
-                </button>
+                <div class="right-column">
+                    <p class="date">2022, США, 1ч 45 мин, В прокате до 26 ноября</p>
+                    <h1 class="film-name">Элвис</h1>
+                    <ul class="film-attributes-list">
+                        <li class="film-attributes-list__item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M6.99953 10.3653L9.91206 12.0242C10.4454 12.3282 11.0981 11.8788 10.9578 11.3104L10.1858 8.19091L12.7614 6.08922C13.2316 5.70589 12.979 4.97889 12.3614 4.93263L8.97163 4.66166L7.6452 1.714C7.40659 1.17867 6.59248 1.17867 6.35386 1.714L5.02744 4.65505L1.63767 4.92602C1.02008 4.97229 0.767425 5.69929 1.23764 6.08261L3.8133 8.1843L3.0413 11.3038C2.90094 11.8722 3.55363 12.3216 4.08701 12.0176L6.99953 10.3653Z" fill="#FE9B0E"/>
+                            </svg>
+                            <span>6.5</span>
+                        </li>
+                        <li class="film-attributes-list__item">Премьера</li>
+                        <li class="film-attributes-list__item">Боевик</li>
+                        <li class="film-attributes-list__item">Детектив</li>
+                        <li class="film-attributes-list__item">16+</li>
+                    </ul>
+                    <div class="review">
+                        <div class="review-section">
+                            <p class="review-section__imdb">IMDb</p>
+                            <p class="review-section__review-amount">256 отзывов</p>
+                        </div>
+                        <div class="star-section">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8.00003 11.8461L11.3286 13.7419C11.9382 14.0894 12.6841 13.5758 12.5237 12.9262L11.6414 9.36104L14.585 6.95911C15.1224 6.52102 14.8337 5.69017 14.1279 5.63729L10.2539 5.32761L8.73793 1.95886C8.46523 1.34705 7.53482 1.34705 7.26212 1.95886L5.7462 5.32006L1.87219 5.62974C1.16636 5.68261 0.877615 6.51347 1.415 6.95156L4.35861 9.35349L3.47633 12.9186C3.31592 13.5682 4.06185 14.0818 4.67142 13.7344L8.00003 11.8461Z" fill="white"/>
+                            </svg>
+                            <span>9.2</span>
+                        </div>
+                        <span class="review__divider"></span>
+                        <div class="review-section">
+                            <p class="review-section__imdb">КИНОПОИСК</p>
+                            <p class="review-section__review-amount">132 отзыва</p>
+                        </div>
+                        <div class="star-section">
+                            <img src="/assets/images/ic_round-star.svg" alt="star">
+                            <span>8.7</span>
+                        </div>
+                    </div>
+                    <div class="film-info-items">
+                        <div class="film-info-item">
+                            <div class="film-info-item__type">Премьера</div>
+                            <div class="film-info-item__value">16 февраля 2023</div>
+                        </div>
+                        <div class="film-info-item">
+                            <div class="film-info-item__type">Возраст</div>
+                            <div class="film-info-item__value">12+</div>
+                        </div>
+                        <div class="film-info-item">
+                            <div class="film-info-item__type">Страна</div>
+                            <div class="film-info-item__value">США</div>
+                        </div>
+                        <div class="film-info-item">
+                            <div class="film-info-item__type">Режисер</div>
+                            <div class="film-info-item__value">Дэвид Литч</div>
+                        </div>
+                    </div>
+                    <div class="horizontal-divider"></div>
+                    <p class="roles">В ролях</p>
+                    <p class="actors">Брэд Питт, Джои Кинг, Аарон Тейлор-Джонсон, Брайан Тайри, Генри Эндрю, Кодзи Хироюки, Санада Бэд Банни, Логан Лерман, Зази Битц, Майкл Шеннон</p>
+                    <div class="horizontal-divider"></div>
+                    <h2 class="header-above-pictures">Фрагменты и описание</h2>
+                    <div class="pics-container">
+                        <img class="film-picture" src="/assets/images/pic1.png" alt="pic 1">
+                        <img class="film-picture" src="/assets/images/pic2.png" alt="pic 2">
+                        <img class="film-picture" src="/assets/images/pic2.png" alt="pic 3">
+                    </div>
+                    <p class="film-plot">
+                        Наёмник под кодовым именем Божья Коровка отправляется на новую миссию: вместо заболевшего коллеги он должен сесть в скоростной поезд Токио — Киото, выкрасть чемоданчик и сойти на промежуточной станции. Но выполнение простого задания сильно осложняется, когда выясняется, что состав просто кишит всевозможными киллерами.
+                    </p>
+                    <div class="addition">
+                        <p>Развернуть</p>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                <path d="M8.72058 10.7512C8.32718 11.16 7.67282 11.16 7.27942 10.7512L5.29932 8.69338C4.688 8.05807 5.13824 7 6.0199 7L9.9801 7C10.8618 7 11.312 8.05807 10.7007 8.69338L8.72058 10.7512Z" fill="#FE9B0E"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="right-column">
-                
+        </section>
+        <section class="similar-films">
+            <div class="container">
+                <div class="similar-genre">Похожие по жанру</div>
             </div>
-        </div>
+            <div class="films-cards">
+                <div class="film-card">
+                        
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
