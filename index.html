@@ -41,7 +41,7 @@
             <div class="container">
                 <div class="left-column">
                     <div class="current-film-image">
-                        <img src="/assets/images/main-image.png" alt="main-image">
+                        <img id="main-image" src="/assets/images/main-image.png" alt="main-image">
                         <button class="current-film-image__play-button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                                 <path d="M9.20469 26.0563C8.55885 26.4761 7.90463 26.5 7.242 26.128C6.58067 25.7572 6.25 25.1844 6.25 24.4094V4.35627C6.25 3.58127 6.58067 3.00777 7.242 2.63577C7.90463 2.26506 8.55885 2.2896 9.20469 2.70939L24.9953 12.736C25.5766 13.1235 25.8672 13.6724 25.8672 14.3828C25.8672 15.0932 25.5766 15.6422 24.9953 16.0297L9.20469 26.0563Z" fill="white"/>
@@ -67,28 +67,30 @@
                         <li class="film-attributes-list__item">Детектив</li>
                         <li class="film-attributes-list__item">16+</li>
                     </ul>
-                    <div class="review">
-                        <div class="review-section">
-                            <p class="review-section__imdb">IMDb</p>
-                            <p class="review-section__review-amount">256 отзывов</p>
-                        </div>
-                        <div class="star-section">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M8.00003 11.8461L11.3286 13.7419C11.9382 14.0894 12.6841 13.5758 12.5237 12.9262L11.6414 9.36104L14.585 6.95911C15.1224 6.52102 14.8337 5.69017 14.1279 5.63729L10.2539 5.32761L8.73793 1.95886C8.46523 1.34705 7.53482 1.34705 7.26212 1.95886L5.7462 5.32006L1.87219 5.62974C1.16636 5.68261 0.877615 6.51347 1.415 6.95156L4.35861 9.35349L3.47633 12.9186C3.31592 13.5682 4.06185 14.0818 4.67142 13.7344L8.00003 11.8461Z" fill="white"/>
-                            </svg>
-                            <span>9.2</span>
-                        </div>
-                        <span class="review__divider"></span>
-                        <div class="review-section">
-                            <p class="review-section__imdb">КИНОПОИСК</p>
-                            <p class="review-section__review-amount">132 отзыва</p>
-                        </div>
-                        <div class="star-section">
-                            <img src="/assets/images/ic_round-star.svg" alt="star">
-                            <span>8.7</span>
+                    <div class="tablet-helper">
+                        <div class="review">
+                            <div class="review-section">
+                                <p class="review-section__imdb">IMDb</p>
+                                <p class="review-section__review-amount">256 отзывов</p>
+                            </div>
+                            <div class="star-section">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8.00003 11.8461L11.3286 13.7419C11.9382 14.0894 12.6841 13.5758 12.5237 12.9262L11.6414 9.36104L14.585 6.95911C15.1224 6.52102 14.8337 5.69017 14.1279 5.63729L10.2539 5.32761L8.73793 1.95886C8.46523 1.34705 7.53482 1.34705 7.26212 1.95886L5.7462 5.32006L1.87219 5.62974C1.16636 5.68261 0.877615 6.51347 1.415 6.95156L4.35861 9.35349L3.47633 12.9186C3.31592 13.5682 4.06185 14.0818 4.67142 13.7344L8.00003 11.8461Z" fill="white"/>
+                                </svg>
+                                <span>9.2</span>
+                            </div>
+                            <span class="review__divider"></span>
+                            <div class="review-section">
+                                <p class="review-section__imdb">КИНОПОИСК</p>
+                                <p class="review-section__review-amount">132 отзыва</p>
+                            </div>
+                            <div class="star-section">
+                                <img src="/assets/images/ic_round-star.svg" alt="star">
+                                <span>8.7</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="film-info-items">
+                    <div class="film-info-items" id="film-info-items">
                         <div class="film-info-item">
                             <div class="film-info-item__type">Премьера</div>
                             <div class="film-info-item__value">16 февраля 2023</div>
@@ -106,10 +108,10 @@
                             <div class="film-info-item__value">Дэвид Литч</div>
                         </div>
                     </div>
-                    <div class="horizontal-divider"></div>
-                    <p class="roles">В ролях</p>
-                    <p class="actors">Брэд Питт, Джои Кинг, Аарон Тейлор-Джонсон, Брайан Тайри, Генри Эндрю, Кодзи Хироюки, Санада Бэд Банни, Логан Лерман, Зази Битц, Майкл Шеннон</p>
-                    <div class="horizontal-divider"></div>
+                    <div class="horizontal-divider" id="hd1"></div>
+                    <p class="roles" id="roles">В ролях</p>
+                    <p class="actors" id="actors">Брэд Питт, Джои Кинг, Аарон Тейлор-Джонсон, Брайан Тайри, Генри Эндрю, Кодзи Хироюки, Санада Бэд Банни, Логан Лерман, Зази Битц, Майкл Шеннон</p>
+                    <div class="horizontal-divider" id="hd2"></div>
                     <h2 class="header-above-pictures">Фрагменты и описание</h2>
                     <div class="pics-container">
                         <img class="film-picture" src="/assets/images/pic1.png" alt="pic 1">
@@ -134,8 +136,8 @@
             <div class="container">
                 <div class="similar-genre">Похожие по жанру</div>
                 <div class="films-cards">
-                    <div class="film-card">
-                        <img src="/assets/images/1st-card.png" alt="preview">
+                    <div class="film-card" id="1-card">
+                        <img src="/assets/images/1-card.png" alt="preview">
                         <div class="film-info">
                             <div class="film-info__name">Меган</div>
                             <div class="film-info__general-info">Триллер, Криминальный, Драма, до 16 ноября 2022, Франция</div>
@@ -151,8 +153,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="film-card">
-                        <img src="/assets/images/2d-card.png" alt="preview">
+                    <div class="film-card" id="2-card">
+                        <img src="/assets/images/2-card.png" alt="preview">
                         <div class="film-info">
                             <div class="film-info__name">Быстрее пули</div>
                             <div class="film-info__general-info">Триллер, Криминальный, Драма, до 16 ноября 2022, Франция</div>
@@ -168,8 +170,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="film-card">
-                        <img src="/assets/images/3d-card.png" alt="preview">
+                    <div class="film-card" id="3-card">
+                        <img src="/assets/images/3-card.png" alt="preview">
                         <div class="film-info">
                             <div class="film-info__name">Земун</div>
                             <div class="film-info__general-info">Триллер, Криминальный, Драма, до 16 ноября 2022, Франция</div>
@@ -185,8 +187,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="film-card">
-                        <img src="/assets/images/4th-card.png" alt="preview">
+                    <div class="film-card" id="4-card">
+                        <img src="/assets/images/4-card.png" alt="preview">
                         <div class="film-info">
                             <div class="film-info__name">Элвис</div>
                             <div class="film-info__general-info">Триллер, Криминальный, Драма, до 16 ноября 2022, Франция</div>
@@ -202,8 +204,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="film-card">
-                        <img src="/assets/images/5th-card.png" alt="preview">
+                    <div class="film-card" id="5-card">
+                        <img src="/assets/images/5-card.png" alt="preview">
                         <div class="film-info">
                             <div class="film-info__name">Изумительный Морис</div>
                             <div class="film-info__general-info">Триллер, Криминальный, Драма, до 16 ноября 2022, Франция</div>
@@ -219,8 +221,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="film-card">
-                        <img src="/assets/images/6th-card.png" alt="preview">
+                    <div class="film-card" id="6-card">
+                        <img src="/assets/images/6-card.png" alt="preview">
                         <div class="film-info">
                             <div class="film-info__name">Крушение</div>
                             <div class="film-info__general-info">Триллер, Криминальный, Драма, до 16 ноября 2022, Франция</div>
@@ -281,4 +283,5 @@
         </div>
     </footer>
 </body>
+<script src="/script.js"></script>
 </html>

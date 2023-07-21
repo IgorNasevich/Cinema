@@ -123,6 +123,9 @@ body {
 }
 
 .buy-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include fontType;
     margin-top:22px;
     border-radius: 8px;
@@ -130,9 +133,7 @@ body {
     box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.04);
     width: 377px;
     height: 44px;
-    padding: 15px 96px;
     font-weight: 600;
-    text-align: center;
     border: 0;
 }
 
@@ -145,7 +146,7 @@ body {
 .film-name{
     @include fontType;
     font-size: 37px;
-    font-weight:900;
+    font-weight:700;
     letter-spacing: normal;
     letter-spacing: 0.5px;
     padding: 4px 0 15px 0;
@@ -294,7 +295,7 @@ body {
     display:flex;
     width: 584px;
     justify-content: space-between;
-    margin-bottom: 24px;    
+    margin-bottom: 24px;
 }
 
 .film-picture{
@@ -449,12 +450,13 @@ body {
     height: 28px;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
     box-shadow: none;
     margin-top:20px;
     @include fontType;
     font-size: 12px;
     padding:0;
+    font-weight: 600;
+    
 }
 
 .cinema{
@@ -485,6 +487,7 @@ body {
     line-height: 130%; /* 20.8px */
     font-size: 16px;
     margin-bottom: 12px;
+    letter-spacing: normal;
 }
 
 .payment-and-security{
@@ -516,4 +519,223 @@ body {
     opacity: 0.5;
     margin-bottom: 21px;
     letter-spacing: 1px;
+}
+
+@media (max-width:1180px) and (min-width:834px) {
+
+    .container {
+        max-width: 696px;
+        margin: 0 auto;
+    }
+
+    .header {
+        padding: 19px 0 42px 0;
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+        }
+    }
+
+    .main{
+        .container{
+            flex-direction: column;
+        }
+    }
+
+    .current-film-image{
+        height: 408px;
+    }
+
+    .current-film-image__play-button{
+        display: block;
+        position: absolute;
+        top: 151px;
+        left:317px;
+    }
+
+    .right-column{
+        margin-left: 0;
+        display:flex;
+        flex-direction: column;
+    }
+
+    .right-column>div, p, ul, h2{
+        order: 1;
+    }
+
+    .tablet-helper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 23px;
+    }
+
+    .buy-button{
+        margin: 0;
+        @include fontType;
+        width: 302px;
+        height: 51px;
+        text-align: center;
+        letter-spacing: normal;
+    }
+
+    .film-name{
+        position: relative;
+        order:0;
+        margin: -114px 0 0 0 ;
+        z-index:1;
+        padding:0;
+    }
+
+    .date{
+        margin: 11px 0 12px 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .film-attributes-list{
+        margin-bottom: 22px;
+    }
+
+    .pics-container{
+        margin-bottom: 29px;
+    }
+
+    .film-plot{
+        margin-bottom: 9px;
+    }
+
+    #hd1{
+        order:6;
+    }
+
+    #film-info-items{
+        order: 7;
+    }
+
+    #hd2{
+        order:8;
+    }
+
+    #roles{
+        order:9;
+    }
+
+    #actors{
+        order: 10;
+    }
+
+    .addition{
+        margin-bottom: 25px;
+    }
+
+    .horizontal-divider{
+        width: 696px;
+        margin:0;
+    }
+
+    .film-info-items{
+        margin: 20px 0 19px 0;
+    }
+
+    .roles{
+        margin-bottom: 4px;
+        margin-top: 15px;
+    }
+
+    .actors{
+        margin-bottom: 36px;
+    }
+
+    //section similar films
+
+    .similar-genre{
+        font-size: 16px;
+        font-weight: 600;
+        width: 696px;
+        height: 44px;
+        border-radius: 0px;
+        border:none;
+        margin-bottom: 19px;
+    }
+
+    .films-cards{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 19px;
+        height: 383px;
+        width: 696px;
+        margin-bottom: 21px;
+        overflow: hidden;
+    }
+
+    .film-card{
+        display:flex;
+        align-items: center;
+        width: 337px;
+
+        img{
+            border-radius: 6px;
+        }
+    }
+
+    .film-attributes-list_inCard{
+        margin-bottom: 0px;
+    }
+
+    .film-info__general-info{
+        letter-spacing: normal;
+        margin-bottom: 38px;
+    }
+
+    //footer
+
+    .topics{
+        margin-bottom: 47px;
+    }
+
+    .logo-and-button{
+        margin-right:21px;
+
+        img{
+            margin-left:13px;
+        }
+    }
+
+    .cinema{
+        margin-right:6px;
+    }
+
+    .events{
+        margin-right:43px;
+    }
+
+    .buy-button_subscribe{
+        width: 151px;
+        height: 28px;
+        margin-top: 14px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+
+    .logo-and-button__text{
+        margin-top:14px;
+        width: 190px;
+        margin-bottom: 0;
+    }
+
+    .group-list-item{
+        letter-spacing: normal;
+    }
+
+    .privacy-policy{
+        margin-bottom: 3px;
+    }
+
+    .entity{
+        margin-bottom: 24px;
+    }
 }
