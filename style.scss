@@ -9,6 +9,11 @@
     src: url("/assets/fonts/SF-Pro-Display-Medium.ttf");
 }
 
+@font-face {
+    font-family: 'Advent_Pro';
+    src: url("/assets/fonts/Advent_Pro/AdventPro-Regular.ttf");
+}
+
 @mixin fontType {
     font-family: "SF Pro Display", sans-serif;
     font-size: 14px;
@@ -348,3 +353,167 @@ body {
     margin-bottom: 18px;
 }
 
+.films-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 16px;
+    height: 380px;
+    width: 1180px;
+    margin-bottom: 54px;
+}
+
+.film-card{
+    display:flex;
+    align-items: center;
+    width: 380px;
+    height: 182px;
+    border-radius: 10px;
+    background: #392534;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.15);
+
+    img{
+        border-radius: 6px;
+        padding: 0 12px 0 16px
+    }
+}
+
+.film-info{
+    display:flex;
+    flex-direction: column;
+}
+
+.film-info__name{
+    @include fontType;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.film-info__general-info{
+    @include fontType;
+    width: 227px;
+    font-size: 16px;
+    line-height: 130%; /* 20.8px */
+    margin-bottom: 41px;
+    color: rgba(255, 255, 255, 0.70);
+}
+
+.film-attributes-list_inCard{
+    margin-bottom: 0px;
+    width: 172px;
+    justify-content: space-between;
+}
+
+
+.film-attributes-list__item_film-card{
+    background: transparent;
+}
+
+.footer{
+    background: #4A113C;
+    .container{
+        padding-top: 25px;
+    }
+}
+
+.topics{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 48px;
+}
+
+.logo-and-button{
+    margin-right:271px;
+
+    img{
+        margin-left:13px;
+    }
+}
+
+.logo-and-button__text{
+    @include fontType;
+    color: #DCD6DB;
+    font-size: 13px;
+    line-height: 130%; /* 16.9px */
+    margin-top:10px;
+    margin-bottom: 20px;
+    width: 232px;
+    letter-spacing: normal;
+}
+
+.buy-button_subscribe{
+    display: flex;
+    width: 151px;
+    height: 28px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    box-shadow: none;
+    margin-top:20px;
+    @include fontType;
+    font-size: 12px;
+    padding:0;
+}
+
+.cinema{
+    margin-right:30px;
+    padding-top: 21px;
+}
+
+.events{
+    margin-right:82px;
+    padding-top: 21px;
+}
+
+.sport{
+    padding-top: 21px;
+}
+
+
+.group-list-header{
+    @include fontType;
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px
+}
+
+.group-list-item{
+    @include fontType;
+    line-height: 130%; /* 20.8px */
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.payment-and-security{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.payment-methods{
+    display: flex;
+    justify-content: space-between;
+    width:355px;
+}
+
+.privacy-policy{
+    @include fontType;
+    color:  #FE9B0E;
+    font-family: SF Pro Display;
+    font-size: 12px;
+    margin: 15px 0 6px 0;
+    letter-spacing: normal;
+}
+
+.entity{
+    @include fontType;
+    font-family: "Advent_Pro";
+    font-size: 12px;
+    line-height: 150%; /* 18px */
+    opacity: 0.5;
+    margin-bottom: 21px;
+    letter-spacing: 1px;
+}

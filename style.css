@@ -8,6 +8,10 @@
   font-family: "SF Pro Display";
   src: url("/assets/fonts/SF-Pro-Display-Medium.ttf");
 }
+@font-face {
+  font-family: "Advent_Pro";
+  src: url("/assets/fonts/Advent_Pro/AdventPro-Regular.ttf");
+}
 body {
   background: linear-gradient(180deg, #4A113C 0%, #261121 15.63%, #261121 100%);
   background-repeat: no-repeat;
@@ -385,6 +389,199 @@ body {
   background: #503449;
   box-sizing: border-box;
   margin-bottom: 18px;
+}
+
+.films-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 16px;
+  height: 380px;
+  width: 1180px;
+  margin-bottom: 54px;
+}
+
+.film-card {
+  display: flex;
+  align-items: center;
+  width: 380px;
+  height: 182px;
+  border-radius: 10px;
+  background: #392534;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.15);
+}
+.film-card img {
+  border-radius: 6px;
+  padding: 0 12px 0 16px;
+}
+
+.film-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.film-info__name {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.film-info__general-info {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  width: 227px;
+  font-size: 16px;
+  line-height: 130%; /* 20.8px */
+  margin-bottom: 41px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.film-attributes-list_inCard {
+  margin-bottom: 0px;
+  width: 172px;
+  justify-content: space-between;
+}
+
+.film-attributes-list__item_film-card {
+  background: transparent;
+}
+
+.footer {
+  background: #4A113C;
+}
+.footer .container {
+  padding-top: 25px;
+}
+
+.topics {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 48px;
+}
+
+.logo-and-button {
+  margin-right: 271px;
+}
+.logo-and-button img {
+  margin-left: 13px;
+}
+
+.logo-and-button__text {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  color: #DCD6DB;
+  font-size: 13px;
+  line-height: 130%; /* 16.9px */
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 232px;
+  letter-spacing: normal;
+}
+
+.buy-button_subscribe {
+  display: flex;
+  width: 151px;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  box-shadow: none;
+  margin-top: 20px;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  font-size: 12px;
+  padding: 0;
+}
+
+.cinema {
+  margin-right: 30px;
+  padding-top: 21px;
+}
+
+.events {
+  margin-right: 82px;
+  padding-top: 21px;
+}
+
+.sport {
+  padding-top: 21px;
+}
+
+.group-list-header {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.group-list-item {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  line-height: 130%; /* 20.8px */
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.payment-and-security {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: space-between;
+  width: 355px;
+}
+
+.privacy-policy {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  color: #FE9B0E;
+  font-family: SF Pro Display;
+  font-size: 12px;
+  margin: 15px 0 6px 0;
+  letter-spacing: normal;
+}
+
+.entity {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  font-family: "Advent_Pro";
+  font-size: 12px;
+  line-height: 150%; /* 18px */
+  opacity: 0.5;
+  margin-bottom: 21px;
+  letter-spacing: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */
