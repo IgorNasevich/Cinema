@@ -932,19 +932,35 @@ body {
     margin-bottom: 38px;
   }
   .topics {
-    margin-bottom: 47px;
+    margin-bottom: 0;
+    flex-direction: column;
+    align-items: center;
   }
   .logo-and-button {
-    margin-right: 21px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    align-items: center;
   }
   .logo-and-button img {
-    margin-left: 13px;
+    margin-left: 0px;
+  }
+  .logo-and-button__text {
+    display: none;
   }
   .cinema {
-    margin-right: 6px;
+    padding: 0;
+    margin-right: 0px;
+    margin-bottom: 12px;
   }
   .events {
-    margin-right: 43px;
+    margin-right: 0px;
+    margin-bottom: 12px;
+    padding: 0;
+  }
+  .sport {
+    padding: 0;
+    margin-bottom: 19px;
   }
   .buy-button_subscribe {
     width: 151px;

@@ -34,7 +34,7 @@ window.onresize = function(){
 
 function setTabletLayout () {
     //change image
-    document.getElementById("main-image").setAttribute("src", "/assets/images/middle-size-main-image.png");
+    document.getElementById("main-image").setAttribute("src", "assets/images/middle-size-main-image.png");
     //replace button
     let button1 = document.getElementsByClassName("buy-button")[0];
     document.getElementsByClassName("buy-button")[0].remove();
@@ -48,10 +48,10 @@ function setTabletLayout () {
     }
 
     //change card pictures
-    document.getElementById("1-card").firstElementChild.setAttribute("src", "/assets/images/1-card-tablet.png");
-    document.getElementById("2-card").firstElementChild.setAttribute("src", "/assets/images/2-card-tablet.png");
-    document.getElementById("3-card").firstElementChild.setAttribute("src", "/assets/images/3-card-tablet.png");
-    document.getElementById("4-card").firstElementChild.setAttribute("src", "/assets/images/4-card-tablet.png");
+    document.getElementById("1-card").firstElementChild.setAttribute("src", "assets/images/1-card-tablet.png");
+    document.getElementById("2-card").firstElementChild.setAttribute("src", "assets/images/2-card-tablet.png");
+    document.getElementById("3-card").firstElementChild.setAttribute("src", "assets/images/3-card-tablet.png");
+    document.getElementById("4-card").firstElementChild.setAttribute("src", "assets/images/4-card-tablet.png");
     //change cards names
     document.getElementsByClassName("film-info__name")[0].innerText = "Аватар: Путь воды";
     document.getElementsByClassName("film-info__name")[1].innerText = "Мой домашний крокодил";
@@ -68,7 +68,7 @@ function setTabletLayout () {
 
     function setPCLayout () {
     //return image
-    document.getElementById("main-image").setAttribute("src", "/assets/images/main-image.png" );
+    document.getElementById("main-image").setAttribute("src", "assets/images/main-image.png" );
     //return button
     let button1 = document.getElementsByClassName("buy-button")[0];
     document.getElementsByClassName("buy-button")[0].remove();
@@ -79,10 +79,10 @@ function setTabletLayout () {
     document.getElementById("4-card").after(card5);
     document.getElementById("5-card").after(card6);
     //return card pictures
-    document.getElementById("1-card").firstElementChild.setAttribute("src", "/assets/images/1-card.png");
-    document.getElementById("2-card").firstElementChild.setAttribute("src", "/assets/images/2-card.png");
-    document.getElementById("3-card").firstElementChild.setAttribute("src", "/assets/images/3-card.png");
-    document.getElementById("4-card").firstElementChild.setAttribute("src", "/assets/images/4-card.png");
+    document.getElementById("1-card").firstElementChild.setAttribute("src", "assets/images/1-card.png");
+    document.getElementById("2-card").firstElementChild.setAttribute("src", "assets/images/2-card.png");
+    document.getElementById("3-card").firstElementChild.setAttribute("src", "assets/images/3-card.png");
+    document.getElementById("4-card").firstElementChild.setAttribute("src", "assets/images/4-card.png");
     //return cards names
     document.getElementsByClassName("film-info__name")[0].innerText = "Меган";
     document.getElementsByClassName("film-info__name")[1].innerText = "Быстрее пули";
@@ -98,7 +98,7 @@ function setMobileLayout () {
         document.getElementById("hd2").remove();
         document.getElementById("hd1").remove();
     }
-    document.getElementById("main-image").setAttribute("src", "/assets/images/main-image-small-size.png" );
+    document.getElementById("main-image").setAttribute("src", "assets/images/main-image-small-size.png" );
     let button1 = document.getElementsByClassName("buy-button")[0];
     document.getElementsByClassName("buy-button")[0].remove();
     document.getElementsByClassName("review")[0].after(button1);
@@ -106,10 +106,10 @@ function setMobileLayout () {
     document.getElementsByClassName("film-name")[0].innerText = "Операция «Фортуна»: Искусство побеждать";
     //delete 2 last cards;
     //change card pictures
-    document.getElementById("1-card").firstElementChild.setAttribute("src", "/assets/images/1-card-tablet.png");
-    document.getElementById("2-card").firstElementChild.setAttribute("src", "/assets/images/2-card-tablet.png");
-    document.getElementById("3-card").firstElementChild.setAttribute("src", "/assets/images/3-card-tablet.png");
-    document.getElementById("4-card").firstElementChild.setAttribute("src", "/assets/images/4-card-tablet.png");
+    document.getElementById("1-card").firstElementChild.setAttribute("src", "assets/images/1-card-tablet.png");
+    document.getElementById("2-card").firstElementChild.setAttribute("src", "assets/images/2-card-tablet.png");
+    document.getElementById("3-card").firstElementChild.setAttribute("src", "assets/images/3-card-tablet.png");
+    document.getElementById("4-card").firstElementChild.setAttribute("src", "assets/images/4-card-tablet.png");
     //change cards names
     document.getElementsByClassName("film-info__name")[0].innerText = "Аватар: Путь воды";
     document.getElementsByClassName("film-info__name")[1].innerText = "Мой домашний крокодил";
