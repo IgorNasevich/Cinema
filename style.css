@@ -606,8 +606,6 @@ body {
     height: 408px;
   }
   .current-film-image__play-button {
-    display: block;
-    position: absolute;
     top: 151px;
     left: 317px;
   }
@@ -764,6 +762,210 @@ body {
   .container {
     max-width: 343px;
     margin: 0 auto;
+  }
+  .header {
+    padding: 0;
+  }
+  .header .container {
+    align-items: center;
+    margin-top: 50px;
+  }
+  .buttons {
+    display: none;
+  }
+  .logo {
+    margin-left: 141px;
+  }
+  .main .container {
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .current-film-image {
+    position: relative;
+    height: 420px;
+    width: 375px;
+    margin-left: -16px;
+  }
+  .current-film-image img {
+    width: 100%;
+  }
+  .current-film-image__play-button {
+    top: 179px;
+    left: 157px;
+  }
+  .search {
+    margin: 16px;
+  }
+  .right-column {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .right-column > div, p, ul, h2 {
+    order: 1;
+  }
+  .tablet-helper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  .buy-button {
+    margin: 0;
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    width: 343px;
+    height: 44px;
+    text-align: center;
+    letter-spacing: normal;
+    margin-bottom: 26px;
+  }
+  .film-name {
+    position: relative;
+    order: 0;
+    margin: -139px 0 0 0;
+    z-index: 1;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .date {
+    margin: 8px 0 12px 0;
+    position: relative;
+    z-index: 1;
+  }
+  .film-attributes-list {
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+  }
+  .review {
+    border: none;
+    margin-bottom: 34px;
+  }
+  .pics-container {
+    margin-bottom: 12px;
+    width: 392px;
+  }
+  #delete-on-mobile {
+    display: none;
+  }
+  .film-plot {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  #hd1 {
+    order: 6;
+  }
+  #film-info-items {
+    order: 7;
+  }
+  #hd2 {
+    order: 8;
+  }
+  #roles {
+    order: 9;
+  }
+  #actors {
+    order: 10;
+  }
+  .addition {
+    margin-bottom: 12px;
+  }
+  .horizontal-divider {
+    width: 696px;
+    margin: 0;
+  }
+  .film-info-items {
+    margin: 0;
+    flex-direction: column;
+    height: 204px;
+    justify-content: space-between;
+  }
+  .roles {
+    margin-bottom: 4px;
+    margin-top: 12px;
+  }
+  .actors {
+    margin-bottom: 32px;
+  }
+  .similar-genre {
+    font-size: 24px;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 16px;
+    background: transparent;
+    border: none;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .films-cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 16px;
+    height: 1092px;
+    width: 375px;
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+  .film-card {
+    display: flex;
+    align-items: center;
+    width: 337px;
+    height: 150px;
+    background-color: transparent;
+  }
+  .film-card img {
+    border-radius: 6px;
+    padding: 0;
+    padding-right: 12px;
+  }
+  .film-attributes-list_inCard {
+    margin-bottom: 0px;
+  }
+  .film-info__general-info {
+    letter-spacing: normal;
+    margin-bottom: 38px;
+  }
+  .topics {
+    margin-bottom: 47px;
+  }
+  .logo-and-button {
+    margin-right: 21px;
+  }
+  .logo-and-button img {
+    margin-left: 13px;
+  }
+  .cinema {
+    margin-right: 6px;
+  }
+  .events {
+    margin-right: 43px;
+  }
+  .buy-button_subscribe {
+    width: 151px;
+    height: 28px;
+    margin-top: 14px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .logo-and-button__text {
+    margin-top: 14px;
+    width: 190px;
+    margin-bottom: 0;
+  }
+  .group-list-item {
+    letter-spacing: normal;
+  }
+  .privacy-policy {
+    margin-bottom: 3px;
+  }
+  .entity {
+    margin-bottom: 24px;
   }
 }
 

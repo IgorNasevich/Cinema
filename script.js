@@ -8,13 +8,13 @@ let currentScreen = -1;
 
 window.onresize = function(){
     let newScreen;
-    if(document.documentElement.clientWidth <= 1180){
+    if(document.documentElement.clientWidth <= 1180 && document.documentElement.clientWidth > 835){
        newScreen = TabletScreen;
     }
     else if (document.documentElement.clientWidth <= 834){
         newScreen = MobileScreen;
     }
-    else{
+    else if(document.documentElement.clientWidth > 1180){
         newScreen = PCScreen;
     }
 
@@ -42,8 +42,11 @@ function setTabletLayout () {
     //change film name
     document.getElementsByClassName("film-name")[0].innerText = "Операция «Фортуна»: Искусство побеждать";
     //delete 2 last cards;
-    document.getElementById("5-card").remove();
-    document.getElementById("6-card").remove();
+    if(document.getElementById("5-card")===true){
+        document.getElementById("6-card").remove();
+        document.getElementById("5-card").remove();
+    }
+
     //change card pictures
     document.getElementById("1-card").firstElementChild.setAttribute("src", "/assets/images/1-card-tablet.png");
     document.getElementById("2-card").firstElementChild.setAttribute("src", "/assets/images/2-card-tablet.png");
@@ -54,7 +57,14 @@ function setTabletLayout () {
     document.getElementsByClassName("film-info__name")[1].innerText = "Мой домашний крокодил";
     document.getElementsByClassName("film-info__name")[2].innerText = "Амстердам";
     document.getElementsByClassName("film-info__name")[3].innerText = "Знакомство родителей";
+
+    //return HorDevs
+    if(document.getElementById("hd2") === false){
+
     }
+
+
+}
 
     function setPCLayout () {
     //return image
@@ -81,8 +91,30 @@ function setTabletLayout () {
 }
 
 
-function setMobileLayout(){
+function setMobileLayout () {
 
+    let horizDev = document.getElementById("hd2");
+    if(document.getElementById("hd2") !== false){
+        document.getElementById("hd2").remove();
+        document.getElementById("hd1").remove();
+    }
+    document.getElementById("main-image").setAttribute("src", "/assets/images/main-image-small-size.png" );
+    let button1 = document.getElementsByClassName("buy-button")[0];
+    document.getElementsByClassName("buy-button")[0].remove();
+    document.getElementsByClassName("review")[0].after(button1);
+    //change film name
+    document.getElementsByClassName("film-name")[0].innerText = "Операция «Фортуна»: Искусство побеждать";
+    //delete 2 last cards;
+    //change card pictures
+    document.getElementById("1-card").firstElementChild.setAttribute("src", "/assets/images/1-card-tablet.png");
+    document.getElementById("2-card").firstElementChild.setAttribute("src", "/assets/images/2-card-tablet.png");
+    document.getElementById("3-card").firstElementChild.setAttribute("src", "/assets/images/3-card-tablet.png");
+    document.getElementById("4-card").firstElementChild.setAttribute("src", "/assets/images/4-card-tablet.png");
+    //change cards names
+    document.getElementsByClassName("film-info__name")[0].innerText = "Аватар: Путь воды";
+    document.getElementsByClassName("film-info__name")[1].innerText = "Мой домашний крокодил";
+    document.getElementsByClassName("film-info__name")[2].innerText = "Амстердам";
+    document.getElementsByClassName("film-info__name")[3].innerText = "Знакомство родителей";
 }
 
 // window.onresize = function(){
