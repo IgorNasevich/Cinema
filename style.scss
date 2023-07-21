@@ -521,7 +521,7 @@ body {
     letter-spacing: 1px;
 }
 
-@media (max-width:1180px) and (min-width:834px) {
+@media (max-width:1180px) and (min-width:835px) {
 
     .container {
         max-width: 696px;
@@ -738,4 +738,13 @@ body {
     .entity{
         margin-bottom: 24px;
     }
+}
+
+@media (max-width:834px) and (min-width:375px) {
+
+    .container {
+        max-width: 343px;
+        margin: 0 auto;
+    }
+    
 }
