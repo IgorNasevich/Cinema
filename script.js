@@ -1,12 +1,21 @@
 let card5 = document.getElementById("5-card");
 let card6 = document.getElementById("6-card");
 
+let horizDev1 = document.getElementById("hd1");
+let horizDev2 = document.getElementById("hd2");
+
+
 const PCScreen = 0;
 const TabletScreen = 1;
 const MobileScreen = 2;
 let currentScreen = -1;
 
-window.onresize = function(){
+window.onresize = updateLayout;
+updateLayout();
+
+
+
+function updateLayout(){
     let newScreen;
     if(document.documentElement.clientWidth <= 1180 && document.documentElement.clientWidth > 835){
        newScreen = TabletScreen;
@@ -19,6 +28,8 @@ window.onresize = function(){
     }
 
     if(currentScreen !== newScreen){
+        console.log(555);
+        removeHorDevs();
         currentScreen = newScreen;
         if(currentScreen === PCScreen){
             setPCLayout();
@@ -33,14 +44,15 @@ window.onresize = function(){
 }
 
 function setTabletLayout () {
+
     //change image
     document.getElementById("main-image").setAttribute("src", "assets/images/middle-size-main-image.png");
     //replace button
-    let button1 = document.getElementsByClassName("buy-button")[0];
-    document.getElementsByClassName("buy-button")[0].remove();
-    document.getElementsByClassName("review")[0].after(button1);
+    let button1 = document.querySelectorAll(".buy-button")[0];
+    document.querySelectorAll(".buy-button")[0].remove();
+    document.querySelectorAll(".review")[0].after(button1);
     //change film name
-    document.getElementsByClassName("film-name")[0].innerText = "Операция «Фортуна»: Искусство побеждать";
+    document.querySelectorAll(".film-name")[0].innerText = "Операция «Фортуна»: Искусство побеждать";
     //delete 2 last cards;
     if(document.getElementById("5-card")===true){
         document.getElementById("6-card").remove();
@@ -53,28 +65,34 @@ function setTabletLayout () {
     document.getElementById("3-card").firstElementChild.setAttribute("src", "assets/images/3-card-tablet.png");
     document.getElementById("4-card").firstElementChild.setAttribute("src", "assets/images/4-card-tablet.png");
     //change cards names
-    document.getElementsByClassName("film-info__name")[0].innerText = "Аватар: Путь воды";
-    document.getElementsByClassName("film-info__name")[1].innerText = "Мой домашний крокодил";
-    document.getElementsByClassName("film-info__name")[2].innerText = "Амстердам";
-    document.getElementsByClassName("film-info__name")[3].innerText = "Знакомство родителей";
+    document.querySelectorAll(".film-info__name")[0].innerText = "Аватар: Путь воды";
+    document.querySelectorAll(".film-info__name")[1].innerText = "Мой домашний крокодил";
+    document.querySelectorAll(".film-info__name")[2].innerText = "Амстердам";
+    document.querySelectorAll(".film-info__name")[3].innerText = "Знакомство родителей";
 
     //return HorDevs
-    if(document.getElementById("hd2") === false){
+    horizDev1.setAttribute("id","hd1");
+    horizDev2.setAttribute("id","hd2");
+    console.log(horizDev1);
+    document.getElementById("film-info-items").after(horizDev1);
+    document.getElementById("actors").after(horizDev2);
 
-    }
 
 
 }
 
     function setPCLayout () {
+    //return HorDevs
+        document.getElementById("film-info-items").after(horizDev1);
+        document.getElementById("actors").after(horizDev2);
     //return image
     document.getElementById("main-image").setAttribute("src", "assets/images/main-image.png" );
     //return button
-    let button1 = document.getElementsByClassName("buy-button")[0];
-    document.getElementsByClassName("buy-button")[0].remove();
-    document.getElementsByClassName("current-film-image")[0].after(button1);
+    let button1 = document.querySelectorAll(".buy-button")[0];
+    document.querySelectorAll(".buy-button")[0].remove();
+    document.querySelectorAll(".current-film-image")[0].after(button1);
     //return film name
-    document.getElementsByClassName("film-name")[0].innerText = "Элвис";
+    document.querySelectorAll(".film-name")[0].innerText = "Элвис";
     //return 2 last cards
     document.getElementById("4-card").after(card5);
     document.getElementById("5-card").after(card6);
@@ -84,26 +102,23 @@ function setTabletLayout () {
     document.getElementById("3-card").firstElementChild.setAttribute("src", "assets/images/3-card.png");
     document.getElementById("4-card").firstElementChild.setAttribute("src", "assets/images/4-card.png");
     //return cards names
-    document.getElementsByClassName("film-info__name")[0].innerText = "Меган";
-    document.getElementsByClassName("film-info__name")[1].innerText = "Быстрее пули";
-    document.getElementsByClassName("film-info__name")[2].innerText = "Земун";
-    document.getElementsByClassName("film-info__name")[3].innerText = "Элвис";
+    document.querySelectorAll(".film-info__name")[0].innerText = "Меган";
+    document.querySelectorAll(".film-info__name")[1].innerText = "Быстрее пули";
+    document.querySelectorAll(".film-info__name")[2].innerText = "Земун";
+    document.querySelectorAll(".film-info__name")[3].innerText = "Элвис";
 }
 
 
 function setMobileLayout () {
 
-    let horizDev = document.getElementById("hd2");
-    if(document.getElementById("hd2") !== false){
-        document.getElementById("hd2").remove();
-        document.getElementById("hd1").remove();
-    }
+    //change main image
     document.getElementById("main-image").setAttribute("src", "assets/images/main-image-small-size.png" );
-    let button1 = document.getElementsByClassName("buy-button")[0];
-    document.getElementsByClassName("buy-button")[0].remove();
-    document.getElementsByClassName("review")[0].after(button1);
+    //replace button
+    let button1 = document.querySelectorAll(".buy-button")[0];
+    document.querySelectorAll(".buy-button")[0].remove();
+    document.querySelectorAll(".review")[0].after(button1);
     //change film name
-    document.getElementsByClassName("film-name")[0].innerText = "Операция «Фортуна»: Искусство побеждать";
+    document.querySelectorAll(".film-name")[0].innerText = "Операция «Фортуна»: Искусство побеждать";
     //delete 2 last cards;
     //change card pictures
     document.getElementById("1-card").firstElementChild.setAttribute("src", "assets/images/1-card-tablet.png");
@@ -111,28 +126,28 @@ function setMobileLayout () {
     document.getElementById("3-card").firstElementChild.setAttribute("src", "assets/images/3-card-tablet.png");
     document.getElementById("4-card").firstElementChild.setAttribute("src", "assets/images/4-card-tablet.png");
     //change cards names
-    document.getElementsByClassName("film-info__name")[0].innerText = "Аватар: Путь воды";
-    document.getElementsByClassName("film-info__name")[1].innerText = "Мой домашний крокодил";
-    document.getElementsByClassName("film-info__name")[2].innerText = "Амстердам";
-    document.getElementsByClassName("film-info__name")[3].innerText = "Знакомство родителей";
+    document.querySelectorAll(".film-info__name")[0].innerText = "Аватар: Путь воды";
+    document.querySelectorAll(".film-info__name")[1].innerText = "Мой домашний крокодил";
+    document.querySelectorAll(".film-info__name")[2].innerText = "Амстердам";
+    document.querySelectorAll(".film-info__name")[3].innerText = "Знакомство родителей";
+    //add 6 horDevs
+
+    horizDev1.removeAttribute('id');
+    horizDev2.removeAttribute('id');
+    document.getElementById("1-card").after(horizDev1);
+    document.getElementById("2-card").after(horizDev2);
+    document.getElementById("3-card").after(horizDev1.cloneNode(true));
+    document.getElementById("4-card").after(horizDev1.cloneNode(true));
+    document.getElementById("5-card").after(horizDev1.cloneNode(true));
+    document.getElementById("6-card").after(horizDev1.cloneNode(true));
 }
 
-// window.onresize = function(){
-//     let newScreen;
-//     if(document.documentElement.clientWidth <= 1180){
-//        newScreen = TabletScreen;
-//     }
-//     else {
-//         newScreen = PCScreen;
-//     }
 
-//     if(currentScreen !== newScreen){
-//         currentScreen = newScreen;
-//         if(currentScreen === PCScreen){
-//             setPCLayout();
-//         }
-//         if(currentScreen === TabletScreen){
-//             setTabletLayout();
-//         }
-//     }
-// }
+
+function removeHorDevs(){
+    array = document.querySelectorAll(".horizontal-divider");
+    for (let index = 0; index < array.length; index++) {
+        array[index].remove();
+    }
+
+}
