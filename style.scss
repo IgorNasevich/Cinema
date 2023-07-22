@@ -969,12 +969,13 @@ body {
         align-items: center;
 
         img{
+            width: 178px;
+            height: 108px;
             margin-left:0px;
+            margin-bottom: 32px;
         }
     }
-    .logo-and-button__text{
-        display: none;
-    }
+    
 
     .cinema{
         padding: 0;
@@ -1003,18 +1004,21 @@ body {
     }
 
     .buy-button_subscribe{
-        width: 151px;
-        height: 28px;
-        margin-top: 14px;
-        font-size: 12px;
+        width: 343px;
+        height: 44px;
+        margin-top: 16px;
+        font-size: 16px;
         font-weight: 600;
     }
 
 
     .logo-and-button__text{
+        text-align: center;
         margin-top:14px;
-        width: 190px;
+        width: 316px;
         margin-bottom: 0;
+        padding: 0 20px;
+        font-size: 16px;
     }
 
     .group-list-item{
@@ -1036,5 +1040,28 @@ body {
         text-align: center;
         width: 210px;
         margin-bottom: 39px;
+    }
+
+    .subs{
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-top: 22px;
+    }
+
+    .subs__subs-button{
+        border:0;
+        background: transparent;
+        height: 30px;
+    }
+
+    .subs__subs-text{
+        margin-left: 44px;
+        width: 250px;
+        text-align: center;
+        @include fontType;
+        font-size: 24px;
+        font-weight: 700;
     }
 }
