@@ -28,7 +28,6 @@ function updateLayout(){
     }
 
     if(currentScreen !== newScreen){
-        console.log(555);
         removeHorDevs();
         currentScreen = newScreen;
         if(currentScreen === PCScreen){
@@ -73,7 +72,6 @@ function setTabletLayout () {
     //return HorDevs
     horizDev1.setAttribute("id","hd1");
     horizDev2.setAttribute("id","hd2");
-    console.log(horizDev1);
     document.getElementById("film-info-items").after(horizDev1);
     document.getElementById("actors").after(horizDev2);
 

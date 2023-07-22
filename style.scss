@@ -26,6 +26,7 @@
 body {
     background: linear-gradient(180deg, #4A113C 0%, #261121 15.63%, #261121 100%);
     background-repeat: no-repeat;
+    
 }
 //header
 .container {
@@ -95,8 +96,11 @@ body {
 
 //main-left-column
 
-.main .container{
-    display: flex;
+.main {
+    overflow: hidden;
+    .container{
+        display: flex;
+    }
 }
 
 .current-film-image{
@@ -758,14 +762,15 @@ body {
     }
 
     .logo{
-        margin-left: 141px;
+        margin-left: 141px - 16px;
     }
 
     //main
+
     .main .container{
         flex-direction: column;
-        overflow: hidden;
     }
+
     .current-film-image{
         position: relative;
         height: 420px;
@@ -901,8 +906,6 @@ body {
         margin-bottom: 32px;
     }
 
-    ///////////////////
-    
     //section similar films
 
     .similar-genre{
@@ -918,7 +921,7 @@ body {
 
     .films-cards{
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(6, 1fr);
+        grid-template-rows: repeat(12, 1fr);
         row-gap: 16px;
         height: 1092px;
         width: 375px;
